@@ -222,3 +222,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Audio files
+*.wav
+*.mp3
+*.m4[abp]
+*.og[ga]
+*.opus
+*.vorbis
+*.aac
+*.[af]lac
+*.web[am]
+*.aiff
+*.dsd
+*.ape
+*.wv
+*.wma
