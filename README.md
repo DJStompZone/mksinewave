@@ -2,8 +2,9 @@
 
 `mksinewave` is a Python command-line utility for generating pure sine wave audio tones with customizable configurations, smooth attenuation fades, and automatic audio container inference.
 
-[![PyPI version](https://img.shields.io/badge/pypi-v0.1.0-blue)](https://pypi.org/project/mksinewave)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI Version](https://img.shields.io/pypi/v/mksinewave)](https://pypi.org/project/mksinewave)
+[![MIT License](https://img.shields.io/github/license/djstompzone/mksinewave)](https://opensource.org/licenses/MIT)
+![PyPI Python Version](https://img.shields.io/pypi/pyversions/mksinewave)
 
 ## Features
 
