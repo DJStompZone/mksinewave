@@ -3,7 +3,7 @@ import argparse
 from unittest.mock import patch, MagicMock
 import numpy as np
 
-from sinewave.sinewave import parse_frequency, generate_sine_wave, main
+from mksinewave.mksinewave import parse_frequency, generate_sine_wave, main
 
 # ==========================================
 # 1. TESTS FOR parse_frequency()
@@ -123,15 +123,15 @@ def test_soundfile_write_exception(mock_sf_write, mock_exists, capsys):
 # 3. TESTS FOR THE CLI/MAIN PARSER INTERFACE
 # ==========================================
 
-@patch("sys.argv", ["sinewave", "440", "5", "--fade-in", "3", "--fade-out", "3"])
+@patch("sys.argv", ["mksinewave", "440", "5", "--fade-in", "3", "--fade-out", "3"])
 def test_main_fades_exceed_duration():
     """Test that CLI errors out if cumulative fades exceed file length."""
     with pytest.raises(SystemExit):
         main()
 
 
-@patch("sys.argv", ["sinewave", "440", "5"])
-@patch("sinewave.sinewave.generate_sine_wave")
+@patch("sys.argv", ["mksinewave", "440", "5"])
+@patch("mksinewave.mksinewave.generate_sine_wave")
 def test_main_successful_parse(mock_gen):
     """Verify standard argument combinations transfer perfectly from CLI to main loop."""
     main()

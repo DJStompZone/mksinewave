@@ -1,6 +1,6 @@
 [project]
-name = "sinewave"
-version = "1.0.1"
+name = "mksinewave"
+version = "1.0.0"
 description = "Simple command-line tool for creating audio files containing pure sine wave tones"
 authors = [
     {name = "DJ Stomp",email = "85457381+DJStompZone@users.noreply.github.com"}
@@ -25,22 +25,22 @@ dev = [
 ]
 
 [tool.poetry]
-packages = [{include = "sinewave"}]
+packages = [{include = "mksinewave"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-sinewave = "sinewave.sinewave:main"
-test-sinewave = "pytest:main"
+mksinewave = "mksinewave.mksinewave:main"
+test-mksinewave = "pytest:main"
 
 [tool.pytest.ini_options]
-addopts = "--cov=sinewave --cov-report=term-missing --cov-report=html"
+addopts = "--cov=mksinewave --cov-report=term-missing --cov-report=html"
 testpaths = ["tests"]
 
 [tool.coverage.run]
-source = ["sinewave"]
+source = ["mksinewave"]
 
 [tool.coverage.report]
 fail_under = 95
