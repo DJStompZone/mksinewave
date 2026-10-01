@@ -1,6 +1,6 @@
 [project]
 name = "sinewave"
-version = "1.0.0"
+version = "1.0.1"
 description = "Simple command-line tool for creating audio files containing pure sine wave tones"
 authors = [
     {name = "DJ Stomp",email = "85457381+DJStompZone@users.noreply.github.com"}
