@@ -7,11 +7,11 @@
 
 ## Features
 
-- **Flexible Frequency Formats:** Accepts standard numbers (`440`), human-friendly shortcuts (`1.4k'), or explicit units (`22kHz`).
+- **Flexible Frequency Formats:** Accepts standard numbers (`440`), human-friendly shortcuts (`1.4k`), or explicit units (`22kHz`).
 - **Smart Fades:** Prevent harsh audio pops and clicks with customizable linear head and tail attenuation (fade-in/fade-out).
 - **FFmpeg-Style Extension Inference:** Saves directly to `.wav`, `.flac`, `.ogg`, or `.aiff` by automatically detecting the format from your output filename.
 - **Safety Proofed:** Includes built-in human hearing range guards (20 Hz - 22 kHz) and Nyquist frequency anti-aliasing checks.
-- **Safe Overwriting:** Protects existing files unless exlplicitly overridden with the `-f / --force` flag.
+- **Safe Overwriting:** Protects existing files unless explicitly overridden with the `-f / --force` flag.
 
 ## Installation
 
@@ -48,7 +48,7 @@ mksinewave 440 3
 **2. Generate a 1.5 khz tone for 5 seconds as a compressed FLAC file with a smooth fade-in and fade-out:**
 
 ```bash
-mosinewave 1.5k 5 --fade-sin 0.5 --fade-out 1.0 -o output.flac -v
+mksinewave 1.5k 5 --fade-in 0.5 --fade-out 1.0 -o output.flac -v
 ```
 
 **3. Force overwrite an existing file using a specific sample rate:**
@@ -59,18 +59,18 @@ mksinewave "2.2 kHz" 2.5 -s 48000 -o alert.ogg -f
 
 ### Available Command-Line Flags
 
-- --fade-in: Length of head attenuation fade-in in seconds (Default: 0.0).
-- --fade-out: Length of tail attenuation fade-out in" seconds (Default: 0.0).
-- -s, --sample-rate: Audio sampling rate in Hz (Default: 44100).
-- -o, --output: Output filepath inferred via extension (Default: sine_wave.wav).
-- -f, --force: Overwrite the target file if it already exists.
-- -v, --verbose: Enable logging output detailing the generation process.
-- frequency (Positional): Target frequency. Supports formats like 440, 1.4k, 22kHz.
-- duration (Positional): Total length of the audio track in seconds.
+- `--fade-in`: Length of head attenuation fade-in in seconds (Default: 0.0).
+- `--fade-out`: Length of tail attenuation fade-out in" seconds (Default: 0.0).
+- `-s`, `--sample-rate`: Audio sampling rate in hertz (Default: 44100).
+- `-o`, `--output`: Output file path inferred via extension (Default: sine_wave.wav).
+- `-f`, `--force`: Overwrite the target file if it already exists.
+- `-v`, `--verbose`: Enable logging output detailing the generation process.
+- `frequency` (Positional): Target frequency. Supports formats like 440, 1.4k, 22kHz.
+- `duration` (Positional): Total length of the audio track in seconds.
 
 ## Development & Testing
 
-This project maintains rigorus test coverage using `pytest` and `pytest-cov`.
+This project maintains rigorous test coverage using `pytest` and `pytest-cov`.
 
 If you installed the development dependencies, you can execute the test suite globally from the project root directory:
 
@@ -81,4 +81,4 @@ test-mksinewave
 ## License
 
 This project is licensed under the MIT License.
-See the [LICENSE](LICENSE) file for details.
+See the [LICENSE](https://github.com/DJStompZone/mksinewave/blob/main/LICENSE) file for details.
